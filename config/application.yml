@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: dev
+
+server:
+  port: 9021
+  undertow:
+    worker-threads: 150
+
+logging:
+  file: ./log/service.log
+
+
+---
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://118.24.151.172:3306/home_db?characterEncoding=UTF-8&useSSL=false&rewriteBatchedStatements=true
+    username: root
+    password: XpfJIu5_+Z0j
+
+
